@@ -427,6 +427,67 @@
       border-radius: 3px;
     }
 
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      body { padding: 0 0 60px; }
+
+      .download-bar {
+        padding: 16px 16px 0;
+        margin-bottom: 12px;
+      }
+
+      .resume { box-shadow: none; }
+
+      /* Header stacks vertically */
+      .header {
+        grid-template-columns: 1fr;
+        padding: 28px 24px 24px;
+        gap: 20px;
+      }
+
+      .header-name { font-size: 32px; }
+
+      .contact-items { align-items: flex-start; }
+
+      /* Body: single column, sidebar goes below */
+      .body { grid-template-columns: 1fr; }
+
+      .main-col {
+        padding: 24px 20px 28px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      /* Objectives stack */
+      .obj-grid { grid-template-columns: 1fr; }
+
+      /* Company row wraps */
+      .company-row { flex-direction: column; gap: 4px; }
+      .company-meta { flex-wrap: wrap; }
+
+      /* Sidebar full-width row grid */
+      .side-col {
+        padding: 24px 20px 28px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 24px;
+        background: var(--cream);
+      }
+
+      /* Skills spans full width */
+      .side-section:last-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 420px) {
+      .header-name { font-size: 26px; }
+      .header { padding: 22px 18px 20px; }
+      .main-col { padding: 20px 16px 24px; }
+      .side-col {
+        grid-template-columns: 1fr;
+        padding: 20px 16px 24px;
+      }
+    }
+
     /* ── PRINT STYLES ── */
     @media print {
       @page {
@@ -526,7 +587,7 @@
       <div class="header-right">
         <div class="contact-items">
           <div class="contact-item"><span class="contact-dot"></span> 0393 420 338</div>
-          <div class="contact-item"><span class="contact-dot"></span> <a href="mailto:dinhv2388@gmail.com">dinhv2388@gmail.com</a></div>
+          <div class="contact-item"><span class="contact-dot"></span> <a href="/cdn-cgi/l/email-protection#adc9c4c3c5db9f9e9595edcac0ccc4c183cec2c0"><span class="__cf_email__" data-cfemail="1f7b767177692d2c27275f78727e7673317c7072">[email&#160;protected]</span></a></div>
           <div class="contact-item"><span class="contact-dot"></span> Duong Noi, Ha Dong, Ha Noi</div>
           <div class="contact-item"><span class="contact-dot"></span> <a href="https://www.linkedin.com/in/dinh-quoc-viet-will095618256/">LinkedIn ↗</a></div>
         </div>
@@ -785,16 +846,4 @@
               <span class="skill-tag">Jira</span>
             </div>
           </div>
-        </div>
-
-      </div>
-      <!-- end side-col -->
-
-    </div>
-    <!-- end body -->
-
-  </div>
-  <!-- end resume -->
-
-</body>
-</html>
+     
